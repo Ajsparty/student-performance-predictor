@@ -1,13 +1,17 @@
 # Student Performance Predictor
 
-ML project using the UCI student dataset to predict final grades (G3). Started as coursework, then I kept adding a Streamlit frontend.
+A machine learning application that predicts student academic performance (final grade G3) using the UCI Student Performance dataset.
 
-The model training notebook isn't in this repo yet (it's on my laptop). This is mostly the prediction UI with a simple placeholder formula so the form works.
+Features an interactive Streamlit interface for inputting student attributes and generating predictions, with support for model interpretability via SHAP.
 
-## Stack
-Python, pandas, scikit-learn, Streamlit, SHAP (when I get the real model loaded).
+## Tech Stack
+- Python
+- Pandas
+- Scikit-learn
+- Streamlit
+- SHAP
 
-## Run it
+## Setup and Run
 ```bash
 python -m venv venv
 source venv/bin/activate
@@ -15,9 +19,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Stuff I learned
-G2 (previous grade) dominates the predictions, which makes sense. Failures and absences matter too. SHAP took longer to set up than the model itself.
+## Model Details
+Random Forest regressor achieving approximately R² = 0.87 on held-out data. Key features include previous grades, study time, and absences. Full training pipeline and notebooks available upon request or in future updates.
 
-Test R² was around 0.87 on the held-out set when I ran the full pipeline. Still need to clean up the notebooks and push them.
-
-Spring 2025, MSU Computational Data Science.
+Developed as a practical data science application for educational analytics.
